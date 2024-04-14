@@ -32,14 +32,15 @@ for line in f:
         question=line
     else:
         answer+=line +'\n'
-print(questions)
-print(answers)
+#print(questions)
+#print(answers)
 keywords=[]
 kw_model=KeyBERT()
 for question in questions:
     keywords.append(get_keywords(question))
-print(keywords)
+#print(keywords)
 while True:
+    print("Ask your question.")
     question = input()
     keyword=get_keywords(question)
     possible_indexes=[]
