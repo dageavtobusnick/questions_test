@@ -1,0 +1,3 @@
+keybert
+fastapi
+mysql-connector-python
