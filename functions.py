@@ -9,12 +9,12 @@ def get_keywords(question,config,kw_model):
         result.append(word[0])
     return result
     
-def get_mysql_connection():
+def get_mysql_connection(config):
     connection=connect(
-        host="localhost",
-        user="root",
-        password="root",
-        database="urfu_questions_answers"
+        host=config["MySQL"]["host"],
+        user=config["MySQL"]["user"],
+        password=config["MySQL"]["password"],
+        database=config["MySQL"]["database"]
     )
     return connection;
 
